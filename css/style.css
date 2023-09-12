@@ -1,0 +1,269 @@
+@import url(common.css);
+
+body{
+  color: #333;
+  background-color: #eee;
+}
+/* 스크롤 탑버튼*/
+
+html{scroll-behavior: smooth;}
+
+.top{
+  position: fixed;
+  right:30px;
+  bottom:30px;
+  z-index: 100;
+}
+.top a{
+  display:block;
+  width:60px;
+  height:60px;
+  background:url(../imgae/top.png)no-repeat;
+  
+}
+.top a:hover{background-image: url(../imgae/top.png);}
+
+/* header_______ */
+header{
+  width: 100%;
+  /* border: 1px solid blue; */
+}
+#header_logo{
+  width: 1200px;
+  height: inherit;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+h1{
+  flex: 1;
+  padding-top: 2px;
+}
+nav{
+  /* border: 1px solid red; */
+  display: flex;
+  flex: 6;
+}
+.gnb{
+  display: flex;
+  justify-content: center;
+}
+.gnb li a{
+  display: block;
+  color: #000;
+  font-size: 20px;
+  margin: 0 20px;
+  position: relative;
+}
+.gnb li a:before{
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: skyblue;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+}
+.gnb li a:hover:before{width: 100%;}
+main{
+  height: 100vh;
+  background:url(../imgae/main01.jpg)no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  transition: 0.5s;
+}
+main:hover{
+  background-attachment: fixed;
+  background-size: cover;
+  color: #333;
+}
+
+main:hover{background-image: url(../imgae/main02.jpg);}
+
+.main_Text{
+  text-align: left;
+  transform: translateY(350px);
+  margin-left: 50px;
+  font-size: 30px;
+  color: #000;
+  position: absolute;
+}
+main:hover h2{
+  color: #000;
+}
+main:hover .main_text{
+  color:#333;
+}
+/* section________________*/
+section{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+}
+
+#title01 {
+  padding-top: 50px;
+  font-size: 30px;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.card{
+  width: 500px;
+  height: 700px;
+  border-radius:20px;
+  display: flex;
+  overflow: hidden;
+  transition: 0.5s;
+  margin: 0 20px;
+  position: relative;
+}
+.card:hover{
+  transform: translateY(-20px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.card:hover .con{top:0;}
+
+.card:nth-child(1) .con{background: linear-gradient(to top,beige,transparent) ;}
+.card:nth-child(2) .con{background: linear-gradient(to top,beige,transparent) ;}
+.card:nth-child(3)  .con{background: linear-gradient(to top,beige,transparent) ;}
+
+.con{
+  position: absolute;
+  top: 80%;
+  left: 0;
+  color:#000;
+  text-align: center;
+  width: inherit;
+  height: inherit;
+  padding-top: 200px;
+  box-sizing: border-box;
+  font-weight: 500;
+  transition: 0.5s;
+}
+/* 베스트 아이템 */
+  .container{
+  display: flex;
+  position: relative;
+}
+#title02 {
+  font-size: 30px;
+  margin-bottom: 400px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.best{
+  margin-top: 350px;
+  width: 1400px;
+  height: 500px;
+  display: flex;
+  position: absolute;
+}
+.best li{
+  /* border-right: 5px solid #000; */
+  flex: 1;
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  }
+.best li:last-child{border-right:none}
+.best li:nth-child(1){background:url(../imgae/best_01.png) no-repeat right center;}
+.best li:nth-child(2){background:url(../imgae/best_02.png) no-repeat right center;}
+.best li:nth-child(3){background:url(../imgae/best_03.png) no-repeat right center;}
+.best li:nth-child(4){background:url(../imgae/best_04.png) no-repeat right center;}
+
+.best li:hover{
+  flex: 3;
+}
+.best li:after{
+  content:'';
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.5);
+  top:0;
+  left:0;
+  transition: 0.5s;
+  z-index:-1;
+  position:absolute;
+}
+.best li:hover:after{
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.best li p{
+  font-size: 20px;
+  font-weight: 500;
+  color: #000;
+  z-index: 2;
+  position: absolute;
+}
+.best li:hover p{
+  color: #fff;
+}
+/* 고객센터 */
+#contact{
+  justify-content: center;
+  align-items: center;
+  padding: 300px;
+  position: relative;
+}
+.title03 h2{
+  font-size: 50px;
+}
+.title04
+  {margin: 15px 0 60px 0;}
+
+  #contact ul{
+    display: flex;
+    justify-content: space-between;
+  }
+  #contact ul li{
+    width: 280px;
+    height: 280px;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  #contact ul li span{
+    font-size: 50px;
+    color: #444;
+    margin-bottom: 8px;
+    transition: 0.5s;
+  }
+  #contact ul li p{
+    font-size: 22px;
+  }
+  #contact ul li:hover{
+    background-color: orange;
+    border-radius: 50%;
+    color: #fff;
+  }
+  #contact ul li:hover span{
+    color: #fff;
+  }
+  /* footer __________________*/
+  footer{
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 0;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
